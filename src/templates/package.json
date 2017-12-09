@@ -1,0 +1,18 @@
+{
+  "name": "PKG_NAME",
+  "version": "PKG_VERSION",
+  "description": "PKG_DESCRIPTION",
+  "main": "PKG_START",
+  "scripts": {
+    "test": "PKG_TEST",
+    "start": "PKG_START"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+PKG_GITREPO"
+  },
+  "author": "PKG_AUTHOR",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
