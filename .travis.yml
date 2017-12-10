@@ -1,0 +1,11 @@
+language: node_js
+node_js: 8
+cache: yarn
+
+deploy:
+  provider: npm
+  email: "michaeldoestech@gmail.com"
+  api_key: 
+    secure: "bxNcB+Xcn/ycusq78csB/2JIrKWWWM1iERZCDRyb6q6tleL25725zysXCURZw2sS1Obk43XLeaCyPexLHoeuKsqOYv//pIvIecN5T6eAiPoHVIuE34fje9iB8HrcogI+CR/zKQOJsAAYNxt4SGk91QcJ9iWqepfRlIOsZrz/pEUPGl3SDbki4ZDCaCAp96qbOvd7Om76+SD9rdK8vFcJRn2G1eaqClKY9TGPt5bkrCgsqDyAVrfG7BTbBoPmNOODltJdDBEdCxdh2dQas87UQE0tOtxO/B69obt/8n0WOvNer7faurq5IF3qs4VyPiPUa/ZysftbcdgvFkHwSc8/3XCU+MQfrmsMNwzZfT3FJs1Kgea3watCvZnYpfFJTlRuYaBtGGKRC0/yRddVXLAbraEVzC03ZA/PNDzxwqEOKhsPdQFvk8et0KWnHCVHJfGSBH3k7yWYFcVjihg/F4eGnc7TP5FRl76p0t3xVvsu0oz9hYqMsNYp2JI3pH6vqL2jBAXdJH0XKieuPVjZMAGbRxux31XjkYFYoHad8DhnlKAFNvPdCXVClW1hvAO7TjidbkmwfqZHRrQhRWgqzKD6FyKEmxnUYdOH+pOJ+R4+t/6amE4299r249X+mDzcr2wt8yDFfD1xBOu/VXRxJC/a9cArc/yLv93M8OhrEEj1gMM="
+  on:
+    branch: master

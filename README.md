@@ -4,7 +4,7 @@
 
 > Reproducible Deployment Management, Dependency and Configuration Management System
 
-[![npm version](https://badge.fury.io/js/ignitejs.svg)](https://badge.fury.io/js/ignitejs) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/ignitejs.svg)](https://badge.fury.io/js/ignitejs) [![Build](https://travis-ci.org/ignitejscl/ignite.svg?branch=master)](https://travis-ci.org/ignitejscl/ignite) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://opensource.org/licenses/MIT)
 
 Ignite is a deployment and dependency management system designed to be reproducible universally. 
 
