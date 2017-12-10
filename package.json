@@ -1,6 +1,6 @@
 {
   "name": "ignitejs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Ignite is a deployment and configuration management tool",
   "main": "index.js",
   "bin": {

@@ -67,3 +67,5 @@ exports.updateConfig = newConfig => {
 };
 
 exports.userConfig = userConfiguration;
+
+exports.configFolder = baseFolder;

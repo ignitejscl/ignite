@@ -10,7 +10,7 @@ const ignore = require('ignore');
 const tar = require('tar-fs');
 
 // Set configuration
-const { userConfig } = require('../config');
+const { userConfig, configFolder } = require('../config');
 
 // Include package.json sample file
 let samplePackageJsonFileImported = require('../templates/package.json');
@@ -33,12 +33,17 @@ exports.builder = {
         alias: 'n',
         description: 'Deploy to Now',
         count: true
+    },
+    provider: {
+        alias: 'p',
+        description: 'Deploy to a specified provider'
     }
 };
 exports.handler = async(args = {}) => {
     const {verbose} = args;
     const {heroku} = args;
     const {now} = args;
+    const {provider} = args;
     console.log();
     console.log(
         `${chalk.bold("Ignite:")} ${chalk.green("Let's push to a cloud provider!")}`
@@ -119,6 +124,21 @@ exports.handler = async(args = {}) => {
                 spinner.fail("Deployment to Now failed.")
             }
         })
+    }
+    else if(provider !== "" && provider !== null) {
+        verbose && console.log(chalk.bold("Ignite:") + chalk.green("Using provider " + provider));
+        let providersPath = path.join(configFolder, 'providers/'+provider);
+        try {
+            const selectedProvider = require(providersPath);
+            spinner.succeed("Provider file loaded.");
+            selectedProvider.run();
+        } catch (e) {
+            spinner.fail("Failed to deploy to provider.");
+            console.error(
+                chalk.bold('Ignite: ') + chalk.red(`Failed to import provider file for ${chalk.red(provider)}, it was not found. Are you sure it's installed?`)
+            )
+            return;
+        }
     }
     else {
         console.log(

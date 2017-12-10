@@ -16,6 +16,8 @@ const install = require('./commands/install')
 const share = require('./commands/share')
 const update = require('./commands/update')
 const deploy = require('./commands/deploy')
+const create_provider = require('./commands/create-provider')
+const install_provider = require('./commands/install-provider')
 
 yargs
     .version(pkg.version)
@@ -25,5 +27,7 @@ yargs
     .command(init)
     .command(share)
     .command(install)
+    .command(create_provider)
+    .command(install_provider)
     .command(deploy)
     .command(update).argv;
